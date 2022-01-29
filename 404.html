@@ -2,17 +2,18 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width" />
     <meta charSet="utf-8" />
+    <title>404 PAGE NOT FOUND</title>
+    <meta http-equiv="content-language" content="en">
+    <meta name="author" content="OGGY">
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="./cloud/mecute-icon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./cloud/mecute-icon.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="./cloud/mecute-icon.png" />
     <meta name="msapplication-square310x310logo" content="./cloud/mecute-icon.png" />
-    <meta name="msapplication-square150x150logo" content="./cloud/mecute-icon.png />
     <meta name="msapplication-TileImage" content="./cloud/mecute-icon.png" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="theme-color" content="#ffffff" />
-    <title>404 PAGE NOT FOUND</title>
     <meta name="next-head-count" content="9" />
 
     <style data-styled="" data-styled-version="5.2.1">
@@ -1059,13 +1060,13 @@
             width: 100%;
             height: 100%;
             top: 0;
-            background-image: url(./cloud/background.gif);
-            background-repeat: no-repeat;
+            background-image: url(https://i.imgur.com/Y5EUU7s.gif);
+            background-repeat: space;
             background-size: cover;
-            background-position: center;
+            background-position-x: center;
             opacity: 100;
-            -webkit-filter: blur(10px);
-            filter: blur(10px);
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
         }
 
         /*!sc*/
@@ -1325,10 +1326,79 @@
         }
 
         /*!sc*/
+
+         /*     LOADING CSS START      */
+
+         *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        html{
+        font-size: 10px;
+        }
+
+        .spinner-wrapper{
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .spinner {
+        position: relative;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        }
+
+        .spinner::before,
+        .spinner:after{
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        }
+
+        .spinner:before {
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(90deg, #ff00cc 0%,#333399 100% );
+        animation: spin .5s infinite linear;
+        }
+
+        .spinner:after {
+        width: 90%;
+        height: 90%;
+        background-color: #000000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+        to {
+        transform: rotate(360deg);
+        }
+        }
+
+        /* LOADING CSS END */
+
     </style>
 </head>
 
 <body>
+
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
+
     <div id="_next">
         <div class="sc-bdfBwQ sc-gsTCUz fGhsIW bhdLno">
             <div class="sc-bdfBwQ sc-gsTCUz bcrzgk bhdLno">
@@ -1341,20 +1411,29 @@
                         <div class="sc-bdfBwQ sc-gsTCUz jgGrsq bhdLno">
                             <div class="sc-bdfBwQ eZNKTD"><img src="./cloud/oggy-logo.gif" alt="O G G Y (nischay876) Profile Image | Linktree" data-testid="ProfileImage" filter="none" class="sc-iBPRYJ flTywP" /></div>
                             <div class="sc-bdfBwQ Header__Grid-sc-i98650-0 llgrqs jvyDlw">
-                                <h1 id="profile-o-g-g-y" class="sc-dlfnbm Header__GridHeading-sc-i98650-1 fgRbfR eiGOpF">404 PAGE NOT FOUND</h1>
+                                <h1 id="profile-o-g-g-y" class="sc-dlfnbm Header__GridHeading-sc-i98650-1 fgRbfR eiGOpF">✦  404 PAGE NOT FOUND  ✦</h1>
                             </div>
                         </div>
                     </div>
                     
                     <div class="sc-bdfBwQ pkAuV">
                         <div data-testid="StyledContainer" class="sc-bdfBwQ StyledContainer__StyledLinkContainer-sc-1kae6sc-0 fSUfbu gzLQjO">
-                            <a href="https://www.oggy.ga" target="_blank" rel="noopener" data-testid="LinkButton" aria-describedby="profile-o-g-g-y " height="auto" class="sc-pFZIQ StyledButton-sc-686c3k-0 ldGKnQ dhQIaC">
+                            <a href="https://www.oggy.ga" target="_self" rel="noopener" data-testid="LinkButton" aria-describedby="profile-o-g-g-y " height="auto" class="sc-pFZIQ StyledButton-sc-686c3k-0 ldGKnQ dhQIaC">
                                 
-                                <p class="sc-hKgILt Button__StyledText-sc-uh5tyw-0 CczVW rsIfq">• HOMEPAGE •</p>
+                                <p class="sc-hKgILt Button__StyledText-sc-uh5tyw-0 CczVW rsIfq">✦ HOMEPAGE ✦</p>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+                
+                    window.addEventListener('load', function () {
+                         // spinnerWrapper.style.display = 'none';
+                        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+                    });
+                </script>
                
 </body>
 
